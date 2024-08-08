@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Elenco delle Pizze{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Le nostre deliziose pizze</h1>
+    <div class="row">
+        {% for pizza in pizzas %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{ asset(pizza.image) }}" class="card-img-top" alt="{{ pizza.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pizza.name }}</h5>
+                        <p class="card-text">{{ pizza.description }}</p>
+                        <p class="card-text"><strong>Prezzo: €{{ pizza.price }}</strong></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Ordina ora</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p>Nessuna pizza disponibile al momento.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
