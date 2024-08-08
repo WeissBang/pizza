@@ -12,4 +12,11 @@
         <p>Utilizziamo solo gli ingredienti migliori per garantire che ogni pizza sia un'esperienza indimenticabile.</p>
     </div>
 </div>
+
+<ul>
+    {% for categories in categories %}
+        <li>{{categories.name}}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
