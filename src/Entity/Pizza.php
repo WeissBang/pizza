@@ -31,6 +31,12 @@ class Pizza
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
+    #[ORM\ManyToOne(inversedBy: 'pizzas2')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +110,18 @@ class Pizza
     public function setImage(string $image): static
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

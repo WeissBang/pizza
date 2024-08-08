@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chi Siamo{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center mb-4">
+            <h1>Chi Siamo</h1>
+            <p class="lead">Benvenuti da Roberto - Dove la Qualità Incontra il Gusto!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>La Nostra Storia</h2>
+            <p>
+                Fondata nel cuore dell'Italia, da Roberto è dedicata a servire le migliori pizze ai nostri amati clienti.
+                Il nostro viaggio è iniziato oltre due decenni fa con una passione per la cucina italiana autentica e un impegno per la qualità.
+            </p>
+            <p>
+                Ogni pizza che facciamo è realizzata con gli ingredienti più freschi e ricette tradizionali tramandate di generazione in generazione.
+                Crediamo nell'arte della pizza, dove ogni fetta racconta una storia di dedizione, passione e amore per il buon cibo.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ asset('images/kitchen.jpg') }}" class="img-fluid rounded" style="max-width: 350px" alt="roberto">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <img src="{{ asset('images/roberto.jpg') }}" class="img-fluid rounded" style="max-width: 350px" alt="roberto">
+        </div>
+        <div class="col-md-6">
+            <h2>La Nostra Filosofia</h2>
+            <p>
+                Da Roberto, crediamo che una grande pizza inizi con grandi ingredienti. Ecco perché selezioniamo i migliori prodotti,
+                carni e formaggi per garantire che ogni pizza che serviamo sia della massima qualità.
+            </p>
+            <p>
+                I nostri chef sono formati nei metodi tradizionali di preparazione della pizza, garantendo che ogni pizza sia cotta alla perfezione.
+                Che tu sia un amante della classica Margherita o che voglia provare qualcosa di nuovo, abbiamo qualcosa per tutti i gusti.
+            </p>
+            <p>
+                Unisciti a noi per un pasto e sperimenta il sapore dell'Italia in ogni morso. Siamo impegnati a fornire un'esperienza culinaria eccezionale,
+                e non vediamo l'ora di servirti.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
